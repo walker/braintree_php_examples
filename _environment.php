@@ -5,7 +5,7 @@ set_include_path(
   realpath(dirname(__FILE__)) . '/ZendFramework-1.10.2-minimal/library'
 );
 
-require_once('Braintree_PHP_1.0.1/lib/Braintree.php');
+require_once('Braintree_PHP_1.1.1/lib/Braintree.php');
 
 Braintree_Configuration::environment('sandbox');
 Braintree_Configuration::merchantId('integration_merchant_id');
