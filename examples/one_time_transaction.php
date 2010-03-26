@@ -58,7 +58,7 @@ function braintree_text_field($label, $name, $result) {
                 </fieldset>
 
                 <?php $tr_data = Braintree_TransparentRedirect::transactionData(
-                    array('redirectUrl' => "http://" . $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"],
+                    array('redirectUrl' => "http://" . $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH),
                     'transaction' => array('amount' => '10.00', 'type' => 'sale'))) ?>
                 <input type="hidden" name="tr_data" value="<?php echo $tr_data ?>" />
 
