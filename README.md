@@ -5,7 +5,6 @@ payment gateway using the [Braintree PHP library](http://www.braintreepaymentsol
 
 ## Running the Examples
 
-* Add the ZendFramework to your include path.
 * Configure \_environment.php with your API keys.
   If you need access to the sandbox [contact Braintree](http://bit.ly/contact-braintree).
 
