@@ -1,8 +1,8 @@
 <?php
-require_once('braintree-php-1.2.1/lib/Braintree.php');
+require_once('braintree-php-2.0.0/lib/Braintree.php');
 
-Braintree_Configuration::environment('sandbox');
-Braintree_Configuration::merchantId('your_merchant_id');
-Braintree_Configuration::publicKey('your_public_key');
-Braintree_Configuration::privateKey('your_private_key');
+Braintree_Configuration::environment('development');
+Braintree_Configuration::merchantId('integration_merchant_id');
+Braintree_Configuration::publicKey('integration_public_key');
+Braintree_Configuration::privateKey('integration_private_key');
 ?>
