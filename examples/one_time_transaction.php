@@ -19,7 +19,7 @@ function braintree_text_field($label, $name, $result) {
     <body>
         <?php
         if (isset($_GET["id"])) {
-            $result = Braintree_Transaction::createFromTransparentRedirect($_SERVER['QUERY_STRING']);
+            $result = Braintree_TransparentRedirect::confirm($_SERVER['QUERY_STRING']);
         }
         if (isset($result) && $result->success) { ?>
             <h1>Braintree Transparent Redirect Response</h1>
@@ -41,7 +41,7 @@ function braintree_text_field($label, $name, $result) {
             <?php if (isset($result)) { ?>
                 <div style="color: red;"><?php echo $result->errors->deepSize(); ?> error(s)</div>
             <?php } ?>
-            <form method="POST" action="<?php echo Braintree_Transaction::createTransactionUrl() ?>" autocomplete="off">
+            <form method="POST" action="<?php echo Braintree_TransparentRedirect::url() ?>" autocomplete="off">
                 <fieldset>
                     <legend>Customer</legend>
                     <?php braintree_text_field('First Name', 'transaction[customer][first_name]', $result); ?>

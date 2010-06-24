@@ -1,5 +1,5 @@
 <?php
-require_once('braintree-php-2.2.0/lib/Braintree.php');
+require_once('braintree-php-2.3.0/lib/Braintree.php');
 
 Braintree_Configuration::environment('sandbox');
 Braintree_Configuration::merchantId('your_merchant_id');
